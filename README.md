@@ -20,4 +20,7 @@ yarn add -D lint-staged node-git-hooks
 
 ## after setting lint-staged on package.json
 yarn install
+
+# install sass plugin for snowpack
+yarn add -D @snowpack/plugin-sass
 ```
