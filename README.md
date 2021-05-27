@@ -30,4 +30,8 @@ yarn add -D stylelint \
             stylelint-config-order \
             stylelint-config-rational-order \
             stylelint-config-prettier stylelint-prettier
+
+# replace chai module to esm-bundle/chai
+yarn remove chai
+yarn add -D @esm-bundle/chai
 ```
