@@ -5,13 +5,34 @@
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix --max-warnings=0"
   },
   "homepage": "https://github.com/ramram1048/my-react-boilerplate#readme",
   "repository": "git@github.com:ramram1048/my-react-boilerplate.git",
   "author": "ramram1048 <ramram1048@gmail.com>",
   "license": "MIT",
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "simple-import-sort"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error"
+    },
+    "ignorePatterns": [
+      "snowpack.config.mjs",
+      "web-test-runner.config.js",
+      "build"
+    ]
+  },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -27,8 +48,14 @@
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.3",
     "@types/snowpack-env": "^2.3.3",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
     "@web/test-runner": "^0.13.3",
     "chai": "^4.3.4",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.2.1",
     "snowpack": "^3.3.7",
     "typescript": "^4.2.4"
