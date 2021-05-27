@@ -14,4 +14,10 @@ yarn add -D eslint \
             eslint-plugin-simple-import-sort \
             eslint-config-prettier \
             eslint-plugin-prettier
+
+# install lint-staged
+yarn add -D lint-staged node-git-hooks
+
+## after setting lint-staged on package.json
+yarn install
 ```
