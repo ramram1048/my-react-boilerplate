@@ -23,4 +23,11 @@ yarn install
 
 # install sass plugin for snowpack
 yarn add -D @snowpack/plugin-sass
+
+# install stylelint
+yarn add -D stylelint \
+            stylelint-config-sass-guidelines \
+            stylelint-config-order \
+            stylelint-config-rational-order \
+            stylelint-config-prettier stylelint-prettier
 ```
