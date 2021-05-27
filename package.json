@@ -1,4 +1,6 @@
 {
+  "name": "my-react-boilerplate",
+  "version": "0.0.0",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
@@ -6,6 +8,10 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
   },
+  "homepage": "https://github.com/ramram1048/my-react-boilerplate#readme",
+  "repository": "git@github.com:ramram1048/my-react-boilerplate.git",
+  "author": "ramram1048 <ramram1048@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
