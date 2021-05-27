@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { FC, useEffect, useState } from 'react';
+
+import styles from './App.module.scss';
 import logo from './logo.svg';
-import './App.css';
 
-interface AppProps {}
-
-function App({}: AppProps) {
+const App: FC = () => {
   // Create the count state.
   const [count, setCount] = useState(0);
   // Create the counter (+1 every second).
@@ -14,9 +13,9 @@ function App({}: AppProps) {
   }, [count, setCount]);
   // Return the App component.
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className={styles.app}>
+      <header className={styles['app-header']}>
+        <img src={logo} className={styles['app-logo']} alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -25,7 +24,7 @@ function App({}: AppProps) {
         </p>
         <p>
           <a
-            className="App-link"
+            className={styles['app-link']}
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
@@ -36,6 +35,6 @@ function App({}: AppProps) {
       </header>
     </div>
   );
-}
+};
 
 export default App;
